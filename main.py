@@ -109,7 +109,9 @@ def deleted_product():
 #Function that calculates the total value of the inventory and prints the total price with 2 decimal places to the user.
 def total_inventary():
     print("///CALCULATE INVENTORY VALUE///")
+    #With a lambda function we make the total of the products with the quantity
     total = sum(map(lambda product: product['price'] * product['amount'], products.values()))
+    #we convert the total to float
     total_float = float(total) 
     print(f"The calculation of the total value of the inventory is:\n ${total_float:.2f}")    
     
